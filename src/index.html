@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/index.css" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.33.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+    <div id="main-container">
+        <div id='map'>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCR3-4NoJpVPk61GcMBDkq_Af1LFXASpX8",
+            authDomain: "earthquake-visualizer-162c1.firebaseapp.com",
+            databaseURL: "https://earthquake-visualizer-162c1.firebaseio.com",
+            storageBucket: "earthquake-visualizer-162c1.appspot.com",
+            messagingSenderId: "1098473034891"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
