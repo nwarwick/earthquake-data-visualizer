@@ -11,7 +11,7 @@ var map = new mapboxgl.Map({
 map.on('load', function() {
     map.addSource('quakes', {
         type: 'geojson',
-        data: '../data/query.json'
+        data: 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson'
     });
     map.addLayer({
         'id': 'quakes',
@@ -24,13 +24,13 @@ map.on('load', function() {
             'circle-radius': {
                 property: 'mag',
                 stops: [
-                    [1, 0.5],
-                    [2, 1],
-                    [3, 2],
-                    [4, 4],
-                    [5, 8],
-                    [6, 16],
-                    [7, 32],
+                    [1, 1],
+                    [2, 2],
+                    [3, 4],
+                    [4, 8],
+                    [5, 16],
+                    [6, 32],
+                    [7, 64],
                 ]
             },
             'circle-color': 'rgb(0, 249, 124)'
